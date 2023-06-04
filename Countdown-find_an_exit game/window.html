@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="timer-case-id" class="timer-case">
+        <div id="timer">
+            00.00.00
+        </div>
+        <button onclick="restartGame()" type="button" id="restBtn" class="btn btn-light">Restart</button>
+    </div>
+
+    <div id="squareGen">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <div class="container-fluid text-center d-flex flex-column justify-content-center align-items-center">
+        <div class="instructions row-10">
+            <h1>Welcome to the "find an exit point" minigame</h1>
+            <p>
+                You will have to find a green target/s hidden within the viewport (screen).
+            </p>           
+        </div>
+
+        <div id="radioBtnForm" class="row-10 text-center d-flex flex-column justify-content-center align-items-center">
+            <h2>Choose your difficulty</h2>
+            <div class="form-1">
+                <form>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="option1" name="difficulty" id="easy" required>
+                        <label class="form-check-label" for="easy">Easy</label>    
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="option2" name="difficulty" id="medium" required>
+                        <label class="form-check-label" for="medium">Medium</label>    
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="option3" name="difficulty" id="hard" required>
+                        <label class="form-check-label" for="hard">Hard</label>    
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row-12">
+            <form class="form-2">
+                <div class="row-6 col-8">
+                    <h2 class="form-2-h2">Choose how many (winning/losing) targets will be hidden within the viewport (screen)</h2>
+                </div>
+
+                <div class="div-input-form-2 input-group form-row">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text">No. of winning targets:</label>
+                        <input type="text" class="form-control" name="count" id="winning" required>
+                    </div>
+                </div>
+
+                <div class="div-input-form-2 input-group form-row">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text">No. of losing targets:</label>  
+                        <input type="text" class="form-control" name="count" id="loosing" required>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="start-div row-12">
+            <h3>Remember!</h3>
+            <p>The timer will start ticking down as soon as you press "Play"</p>
+            <button onclick="launchGame()" type="submit" id="myBtn" class="btn btn-light">Play</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="timer.js"></script>
+    <script src="class.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
